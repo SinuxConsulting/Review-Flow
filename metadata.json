@@ -1,0 +1,5 @@
+{
+  "name": "ReviewFlow MVP",
+  "description": "A multi-tenant review routing platform that directs happy customers to Google and captures unhappy feedback privately, with a native-feeling UI.",
+  "requestFramePermissions": []
+}

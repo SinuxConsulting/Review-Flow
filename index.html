@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReviewFlow</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        
+        <style>
+      :root {
+        --rf-accent: #0f766e; /* teal */
+        --rf-accent-2: #14b8a6;
+        --rf-bg: #f5fbfb;
+        --rf-card-bg: #ffffff;
+        --rf-border: rgba(15, 118, 110, 0.14);
+        --rf-text: #0f172a;
+        --rf-muted: #64748b;
+        --rf-muted-2: #94a3b8;
+        --rf-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+        --rf-shadow-sm: 0 8px 20px rgba(15, 23, 42, 0.06);
+        --rf-ring: rgba(20, 184, 166, 0.35);
+      }
+
+      html, body {
+        height: 100%;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background: radial-gradient(1200px 600px at 20% -10%, rgba(20,184,166,0.18), transparent 55%),
+                    radial-gradient(1000px 500px at 90% 0%, rgba(15,118,110,0.12), transparent 60%),
+                    var(--rf-bg);
+        color: var(--rf-text);
+      }
+
+      /* crisp text */
+      * { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+
+      /* nicer focus rings */
+      :focus-visible {
+        outline: 3px solid var(--rf-ring);
+        outline-offset: 2px;
+      }
+
+      /* subtle scrollbar */
+      ::-webkit-scrollbar { width: 10px; height: 10px; }
+      ::-webkit-scrollbar-thumb { background: rgba(15,118,110,0.18); border-radius: 999px; }
+      ::-webkit-scrollbar-thumb:hover { background: rgba(15,118,110,0.28); }
+      ::-webkit-scrollbar-track { background: transparent; }
+
+      /* selection */
+      ::selection { background: rgba(20,184,166,0.25); }
+
+      /* helper classes for consistent cards */
+      .rf-card {
+        background: var(--rf-card-bg);
+        border: 1px solid var(--rf-border);
+        box-shadow: var(--rf-shadow-sm);
+        border-radius: 16px;
+      }
+      .rf-card:hover {
+        box-shadow: var(--rf-shadow);
+      }
+      .rf-chip {
+        border: 1px solid var(--rf-border);
+        background: rgba(20,184,166,0.08);
+        color: var(--rf-accent);
+      }
+    </style>
+
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.12.0",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "qrcode": "https://esm.sh/qrcode@^1.5.3"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
